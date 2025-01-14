@@ -1,0 +1,6 @@
+<% @patients.each do |patient| %>
+  <div>
+    <p><%= patient.name %> - <%= patient.age %></p>
+    <%= link_to 'Delete', department_patient_path(@department, patient), method: :delete, data: { confirm: 'Are you sure you want to delete this patient?' } %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<h1><%= @department.name %></h1>
+<p><%= @department.description %></p>
+
+<h2>Patients</h2>
+<ul>
+  <% @patients.each do |patient| %>
+    <li><%= patient.name %> (<%= patient.age %>)</li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add Patient', new_department_patient_path(@department) %>
